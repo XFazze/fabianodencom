@@ -1,6 +1,6 @@
 # Fabianoden.com
 
-Frontend in rust yew. Using tailwindcss cli and docker.
+Frontend in rust yew. Using tailwindcss cli.
 
 ## Dev enviroment
 
