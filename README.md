@@ -8,6 +8,7 @@ Frontend in rust yew. Using tailwindcss cli.
 
 - Yew dependencies[guide](https://yew.rs/docs/getting-started/introductionl)
 - Docker-compose
+- Tailwindcss cli
 
 ### Commands
 
