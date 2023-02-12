@@ -16,6 +16,7 @@ To run dev server:
 `cargo serve`
 
 To build prod:
+`trunk clean`
 `trunk build --release`
 
 Tailwindcss watch:
@@ -30,3 +31,4 @@ Tailwindcss build production:
 - [Yew router](https://yew.rs/docs/concepts/router)
 - [Yew](https://yew.rs/docs/getting-started/introduction)
 - [Yew hooks](https://docs.rs/yew-hooks/latest/yew_hooks/index.html)
+- [actix yew example](https://github.com/security-union/yew-actix-template/blob/main/actix-api/src/main.rs)

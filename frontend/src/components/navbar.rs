@@ -31,7 +31,7 @@ pub fn navbar_items(props: &NavbarItemProps) -> Html {
             }else{
                 "".to_string()
             };
-            html! {<div class={classes!("p-8", "text-3xl", "hover:backdrop-brightness-150", active, x_lean)}>
+            html! {<div class={classes!("p-4", "text-xl", "hover:backdrop-brightness-150", active, x_lean)}>
                 <a href={format!("{}", item.link)}> {format!("{}", item.text)}</a>
             </div>}
         })
@@ -48,18 +48,18 @@ pub fn get_navbar_items(active_site: String) -> Vec<LinkItem> {
             active: active_site == "home".to_string(),
             ..Default::default()
         },
-        LinkItem {
-            text: "Websites".to_string(),
-            link: "/websites".to_string(),
-            active: active_site == "websites".to_string(),
-            ..Default::default()
-        },
-        LinkItem {
-            text: "Login".to_string(),
-            x_lean: "right".to_string(),
-            active: active_site == "login".to_string(),
-            ..Default::default()
-        },
+        // LinkItem {
+        //     text: "Websites".to_string(),
+        //     link: "/websites".to_string(),
+        //     active: active_site == "websites".to_string(),
+        //     ..Default::default()
+        // },
+        // LinkItem {
+        //     text: "Login".to_string(),
+        //     x_lean: "right".to_string(),
+        //     active: active_site == "login".to_string(),
+        //     ..Default::default()
+        // },
     ];
     navbar_items
 }

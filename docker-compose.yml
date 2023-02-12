@@ -1,6 +1,29 @@
-version: '3'
+version: '3.8'
 services:
-    web:
-        build: ./
+    yew:
+        volumes:
+            - type: bind 
+              source: / 
+              target: /app 
+            - /app/yew/target
+        build: 
+            context: frontend
+            dockerfile: ./Dockerfile.yew
         ports:
             - 8081:8080
+        command: 
+            - bash -c "cd app/frontend && trunk serve --address 0.0.0.0"
+    actix:
+        volumes:
+            - type: bind 
+              source: / 
+              target: /app 
+            - /app/actix/target
+        build:
+            context: backend
+            dockerfile: ./Dockerfile.actix
+        ports:
+            - 8082:8080
+        command: 
+            - bash ls
+            - bash -c "cd app/backend && cargo watch -x \"run\""

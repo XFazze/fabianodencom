@@ -1,7 +1,6 @@
-mod components;
-mod pages;
-use pages::home::Home;
-use pages::websites::Websites;
+use super::components::base::Base;
+use super::pages::home::Home;
+
 use yew::prelude::*;
 use yew_router::prelude::*;
 
@@ -9,8 +8,8 @@ use yew_router::prelude::*;
 pub enum Route {
     #[at("/")]
     Home,
-    #[at("/websites")]
-    Websites,
+    #[at("/test")]
+    Test,
     #[not_found]
     #[at("/404")]
     NotFound,
@@ -21,10 +20,16 @@ pub fn switch(routes: Route) -> Html {
         Route::Home => html! {
             <Home />
         },
-        Route::Websites => html! {
-            <Websites />
+        Route::Test => html! {
+            <Base  active_page="">
+                <h1>{"This is test"}</h1>
+            </Base>
         },
-        Route::NotFound => html! { <h1>{ "404" }</h1> },
+        Route::NotFound => html! {
+        <Base  active_page="">
+            <h1>{ "Akward" }</h1>
+            <h1>{ "404" }</h1>
+        </Base> },
     }
 }
 
@@ -35,8 +40,4 @@ pub fn app() -> Html {
             <Switch<Route> render={switch} /> // <- must be child of <BrowserRouter>
         </BrowserRouter>
     }
-}
-
-fn main() {
-    yew::Renderer::<App>::new().render();
 }
