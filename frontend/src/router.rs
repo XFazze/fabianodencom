@@ -1,5 +1,5 @@
-use super::components::base::Base;
-use super::pages::home::Home;
+use crate::components::base::Base;
+use crate::pages::home::Home;
 
 use yew::prelude::*;
 use yew_router::prelude::*;
@@ -15,15 +15,13 @@ pub enum Route {
     NotFound,
 }
 
-pub fn switch(routes: Route) -> Html {
-    match routes {
+pub fn switch(route: Route) -> Html {
+    match route {
         Route::Home => html! {
             <Home />
         },
         Route::Test => html! {
-            <Base  active_page="">
                 <h1>{"This is test"}</h1>
-            </Base>
         },
         Route::NotFound => html! {
         <Base  active_page="">

@@ -13,7 +13,7 @@ pub fn title() -> Html {
     html! {
         <>
             <div class={classes!("p-8")}>
-                <p class={classes!("text-8xl", "font-extrabold", "italic")}>
+                <p class={classes!("text-8xl", "font-extrabold","text-emerald-400", )}>
                     {"Fabian Odén"}
                 </p>
                 <div class={classes!("flex", "gap-4","text-emerald-500", "text-xl")}>
@@ -22,9 +22,9 @@ pub fn title() -> Html {
                         {"fabian@fabianoden.com"}
                     </button>
                 </div>
-                <p class={classes!("text-2xl")}>
-                    {"Some websites I made."}
-                </p>
+               // <p class={classes!("text-2xl")}>
+               //     {"Some websites I made."}
+              //  </p>
             </div>
         </>
     }

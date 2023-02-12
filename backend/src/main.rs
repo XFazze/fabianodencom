@@ -1,4 +1,7 @@
-use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
+// use actix_files as fs; https://github.com/vascokk/fullstack-rust
+use actix_web::middleware::Logger;
+use actix_web::{get, web::scope, App, HttpResponse, HttpServer, Responder};
+use actix_web_lab::web::spa;
 
 #[get("/")]
 async fn home() -> impl Responder {
@@ -16,11 +19,21 @@ async fn home() -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {
+    HttpServer::new(move || {
+        let logger = Logger::default();
         App::new()
-            .service(home)
+            .wrap(logger)
+            .service(scope("/api").service(home))
+            // .service(fs::Files::new("/", "./dist").index_file("./dist/index.html")) https://github.com/vascokk/fullstack-rust
+            .service(
+                spa()
+                    .index_file("./dist/index.html")
+                    .static_resources_mount("/")
+                    .static_resources_location("./dist")
+                    .finish(),
+            )
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("0.0.0.0", 8080))?
     .run()
     .await
 }

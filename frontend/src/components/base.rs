@@ -1,5 +1,5 @@
-use super::navbar::{get_navbar_items, LinkItem, NavbarItems};
-use super::title::Title;
+use crate::components::navbar::{get_navbar_items, LinkItem, NavbarItems};
+use crate::components::title::Title;
 use yew::prelude::*;
 
 #[derive(PartialEq, Properties)]

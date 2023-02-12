@@ -1,4 +1,4 @@
-use super::super::components::base::Base;
+use crate::components::base::Base;
 use yew::prelude::*;
 
 #[derive(Properties, PartialEq)]

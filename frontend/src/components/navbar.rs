@@ -26,7 +26,8 @@ pub fn navbar_items(props: &NavbarItemProps) -> Html {
                 "".to_string()
             };
             // Only works for one item
-            let x_lean = if item.x_lean.to_string() == "right".to_string(){
+            let x_lean = 
+            if item.x_lean.to_string() == "right".to_string(){
                 "ml-auto".to_string()
             }else{
                 "".to_string()
