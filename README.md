@@ -6,12 +6,15 @@ Frontend in rust yew. Using tailwindcss cli.
 
 ### Dependencies
 
-- Yew dependencies[guide](https://yew.rs/docs/getting-started/introductionl)
+- Yew dependencies[guide](https://yew.rs/docs/getting-started/introduction)
 - Actix dependencies
 - Docker-compose
 - Tailwindcss cli
 
 ### Commands
+
+To only run frontend:
+`trunk serve`
 
 To generate frontend:
 `trunk watch`
