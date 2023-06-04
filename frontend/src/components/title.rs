@@ -13,10 +13,10 @@ pub fn title() -> Html {
     html! {
         <>
             <div class={classes!("p-8")}>
-                <p class={classes!("text-6xl", "font-extrabold","text-emerald-400", )}>
+                <p class={classes!("text-4xl", "font-extrabold","text-emerald-400", )}>
                     {"Fabian Odén"}
                 </p>
-                <div class={classes!("flex", "gap-4","text-emerald-500")}>
+                <div class={classes!("flex", "gap-4","text-emerald-500", "text-sm")}>
                     <a class={classes!()} href={"https://github.com/XFazze"} target={"_blank"}>{"Github"}</a>
                     <button  class={classes!("cursor-copy")} onclick={copy}>
                         {"fabian@fabianoden.com"}
