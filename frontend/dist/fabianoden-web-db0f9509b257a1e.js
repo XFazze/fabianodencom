@@ -941,16 +941,16 @@ function getImports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper8428 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 685, __wbg_adapter_34);
+    imports.wbg.__wbindgen_closure_wrapper8664 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 718, __wbg_adapter_34);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper8850 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 699, __wbg_adapter_37);
+    imports.wbg.__wbindgen_closure_wrapper9086 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 732, __wbg_adapter_37);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper9299 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 747, __wbg_adapter_40);
+    imports.wbg.__wbindgen_closure_wrapper9535 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 780, __wbg_adapter_40);
         return addHeapObject(ret);
     };
 
@@ -989,7 +989,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('fabianoden-web-ce6f8850f01aedbd_bg.wasm', import.meta.url);
+        input = new URL('fabianoden-web-db0f9509b257a1e_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 
