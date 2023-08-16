@@ -127,10 +127,16 @@ pub fn home() -> Html {
             description: "This is the website you are currently on. ".to_string(),
         },
         Project {
-            name: "League Log(todo)".to_string(),
-            tags: vec!["website".to_string(), "in_progress".to_string()],
+            name: "League Log".to_string(),
+            tags: vec!["website".to_string(), "stable".to_string()],
             url: "leaguelog.fabianoden.com".to_string(),
             description: "Leauge of legends profile statistics and match history.".to_string(),
+        },
+        Project {
+            name: "Auth Fabian".to_string(),
+            tags: vec!["website".to_string(), "stable".to_string()],
+            url: "auth.fabianoden.com".to_string(),
+            description: "Authorization and account service.".to_string(),
         },
         // Project {
         //     name: "League Trivia(todo)".to_string(),
@@ -139,12 +145,12 @@ pub fn home() -> Html {
         //     description: "League related trivia questions."
         //         .to_string(),
         // },
-        Project {
-            name: "Wiki".to_string(),
-            tags: vec!["website".to_string(), "in_progress".to_string()],
-            url: "wiki.fabianoden.com".to_string(),
-            description: "Collection of information and tools.".to_string(),
-        },
+        // Project {
+        //     name: "Wiki".to_string(),
+        //     tags: vec!["website".to_string(), "in_progress".to_string()],
+        //     url: "wiki.fabianoden.com".to_string(),
+        //     description: "Collection of information and tools.".to_string(),
+        // },
         Project {
             name: "Bjorn".to_string(),
             tags: vec!["bot".to_string(), "stable".to_string()],

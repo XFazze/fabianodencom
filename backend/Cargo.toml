@@ -11,4 +11,3 @@ actix-web="4"
 common = {path="../common"}
 actix-web-lab = "0.18.9"
 # actix-files = "0.6.2" https://github.com/vascokk/fullstack-rust
-deadpool-postgres = { version = "0.10.2", features = ["serde"] }
